@@ -1,5 +1,6 @@
-FROM python:3.7
-COPY . /app
+FROM python:3.9-slim
 WORKDIR /app
-RUN pip install -r requirements.txt
-CMD ["python","server/app.py"]
+COPY . /app
+RUN pip install  -r requirements.txt
+
+CMD ["python", "server/app.py"]
